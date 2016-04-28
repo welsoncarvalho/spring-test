@@ -1,8 +1,8 @@
-package br.com.teste.service.impl;
+package br.com.test.service.impl;
 
-import br.com.teste.dao.UserRepository;
-import br.com.teste.model.User;
-import br.com.teste.service.UserService;
+import br.com.test.dao.UserRepository;
+import br.com.test.model.User;
+import br.com.test.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package br.com.teste.model;
+package br.com.test.model;
 
 import javax.persistence.*;
 import java.util.Date;

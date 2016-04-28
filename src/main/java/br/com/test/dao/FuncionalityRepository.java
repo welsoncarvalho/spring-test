@@ -1,6 +1,6 @@
-package br.com.teste.dao;
+package br.com.test.dao;
 
-import br.com.teste.model.Funcionality;
+import br.com.test.model.Funcionality;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

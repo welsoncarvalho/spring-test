@@ -1,4 +1,4 @@
-package br.com.teste.config;
+package br.com.test.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 /**
  * Created by welson on 25/04/16.
  */
-@EnableJpaRepositories(basePackages = {"br.com.teste.dao"})
+@EnableJpaRepositories(basePackages = {"br.com.test.dao"})
 @EnableTransactionManagement
 public class SpringJpaConfig {
 
@@ -49,7 +49,7 @@ public class SpringJpaConfig {
         LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         localContainerEntityManagerFactoryBean.setDataSource(dataSource());
         localContainerEntityManagerFactoryBean.setPackagesToScan(new String[]{
-                "br.com.teste.model"});
+                "br.com.test.model"});
 
         localContainerEntityManagerFactoryBean.setJpaDialect(jpaDialect());
         localContainerEntityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter());

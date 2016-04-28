@@ -1,8 +1,8 @@
-package br.com.teste.service.impl;
+package br.com.test.service.impl;
 
-import br.com.teste.dao.FuncionalityRepository;
-import br.com.teste.model.Funcionality;
-import br.com.teste.service.FuncionalityService;
+import br.com.test.dao.FuncionalityRepository;
+import br.com.test.model.Funcionality;
+import br.com.test.service.FuncionalityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

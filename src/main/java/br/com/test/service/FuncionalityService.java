@@ -1,6 +1,6 @@
-package br.com.teste.service;
+package br.com.test.service;
 
-import br.com.teste.model.Funcionality;
+import br.com.test.model.Funcionality;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package br.com.teste;
+package br.com.test;
 
-import br.com.teste.config.SpringConfig;
-import br.com.teste.model.Funcionality;
-import br.com.teste.service.FuncionalityService;
+import br.com.test.config.SpringConfig;
+import br.com.test.model.Funcionality;
+import br.com.test.service.FuncionalityService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -1,6 +1,6 @@
-package br.com.teste.dao;
+package br.com.test.dao;
 
-import br.com.teste.model.User;
+import br.com.test.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

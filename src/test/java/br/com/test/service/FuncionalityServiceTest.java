@@ -1,7 +1,7 @@
-package br.com.teste.service;
+package br.com.test.service;
 
-import br.com.teste.config.SpringConfig;
-import br.com.teste.model.Funcionality;
+import br.com.test.config.SpringConfig;
+import br.com.test.model.Funcionality;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
