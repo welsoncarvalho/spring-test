@@ -35,6 +35,7 @@ public class SpringJpaConfig {
         jpaVendorAdapter.setDatabase(Database.HSQL);
         jpaVendorAdapter.setDatabasePlatform("org.hibernate.dialect.HSQLDialect");
         jpaVendorAdapter.setGenerateDdl(Boolean.TRUE);
+        jpaVendorAdapter.setShowSql(Boolean.TRUE);
 
         return jpaVendorAdapter;
     }
@@ -48,8 +49,7 @@ public class SpringJpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         localContainerEntityManagerFactoryBean.setDataSource(dataSource());
-        localContainerEntityManagerFactoryBean.setPackagesToScan(new String[]{
-                "br.com.test.model"});
+        localContainerEntityManagerFactoryBean.setPackagesToScan("br.com.test.model");
 
         localContainerEntityManagerFactoryBean.setJpaDialect(jpaDialect());
         localContainerEntityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter());

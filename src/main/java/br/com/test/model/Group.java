@@ -17,11 +17,12 @@ public class Group {
     @Column(name = "name")
     private String name;
 
+    @ManyToMany
     @JoinTable(name = "group_func",
             joinColumns = {@JoinColumn(name = "id_group", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "id_funcionality", referencedColumnName = "id")})
-    @ElementCollection(targetClass = Funcionality.class)
-    private Set<Funcionality> funcionalities;
+            inverseJoinColumns = {@JoinColumn(name = "id_functionality", referencedColumnName = "id")},
+            uniqueConstraints = {@UniqueConstraint(columnNames = {"id_group", "id_functionality"})})
+    private Set<Functionality> functionalities;
 
     public Long getId() {
         return id;
@@ -39,11 +40,11 @@ public class Group {
         this.name = name;
     }
 
-    public Set<Funcionality> getFuncionalities() {
-        return funcionalities;
+    public Set<Functionality> getFunctionalities() {
+        return functionalities;
     }
 
-    public void setFuncionalities(Set<Funcionality> funcionalities) {
-        this.funcionalities = funcionalities;
+    public void setFunctionalities(Set<Functionality> functionalities) {
+        this.functionalities = functionalities;
     }
 }

@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Created by welson on 25/04/16.
  */
 @Entity
-@Table(name = "adm_funcionality")
-public class Funcionality {
+@Table(name = "adm_functionality")
+public class Functionality {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
