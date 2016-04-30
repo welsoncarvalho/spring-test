@@ -1,22 +1,16 @@
 package br.com.test.service;
 
-import br.com.test.config.SpringTestConfig;
 import br.com.test.model.Functionality;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
 /**
  * Created by welson on 25/04/16.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = SpringTestConfig.class)
-public class FunctionalityServiceTest {
+public class FunctionalityServiceTest extends ServiceTest {
 
     private static final String NAME_NEW_FUNCTIONALITY = "New Functionality";
 
@@ -37,7 +31,6 @@ public class FunctionalityServiceTest {
     @Test
     public void testList() {
         List<Functionality> listFunctionality = functionalityService.list();
-        System.out.println(listFunctionality.get(0).getId());
         Assert.assertTrue(listFunctionality.size() > 0);
     }
 
