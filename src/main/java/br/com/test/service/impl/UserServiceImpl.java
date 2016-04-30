@@ -1,6 +1,7 @@
 package br.com.test.service.impl;
 
 import br.com.test.dao.UserRepository;
+import br.com.test.exception.BusinessException;
 import br.com.test.model.User;
 import br.com.test.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,14 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     public void save(User user) {
+        checkUserRegistry(user);
         userRepository.save(user);
+    }
+
+    private void checkUserRegistry(User user) {
+        if(userRepository.findByRegistry(user.getRegistry()) != null) {
+            throw new BusinessException("Already exist user registry");
+        }
     }
 
 }

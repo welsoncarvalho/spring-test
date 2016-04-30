@@ -21,6 +21,9 @@ public class User {
     @Column(name = "birth_date")
     private Date birthDate;
 
+    @Column(name = "registry")
+    private Long registry;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_group", referencedColumnName = "id")
     private Group group;
@@ -47,6 +50,14 @@ public class User {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public Long getRegistry() {
+        return registry;
+    }
+
+    public void setRegistry(Long registry) {
+        this.registry = registry;
     }
 
     public Group getGroup() {

@@ -10,7 +10,9 @@ import java.util.List;
 /**
  * Created by welson on 25/04/16.
  */
-public class FunctionalityServiceTest extends ServiceTest {
+public class FunctionalityServiceTest extends AbstractServiceTest {
+
+    private static final Long ID_FUNCTIONALITY_USERS = 1L;
 
     private static final String NAME_NEW_FUNCTIONALITY = "New Functionality";
 
@@ -23,9 +25,13 @@ public class FunctionalityServiceTest extends ServiceTest {
         functionality.setName(NAME_NEW_FUNCTIONALITY);
 
         functionalityService.save(functionality);
+        Assert.assertNotNull(functionality.getId());
+    }
 
-        Functionality functionalityDB = functionalityService.loadById(functionality.getId());
-        Assert.assertEquals(NAME_NEW_FUNCTIONALITY, functionalityDB.getName());
+    @Test
+    public void testLoadById() {
+        Functionality functionality = functionalityService.loadById(ID_FUNCTIONALITY_USERS);
+        Assert.assertNotNull(functionality);
     }
 
     @Test

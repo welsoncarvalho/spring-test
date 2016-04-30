@@ -17,5 +17,5 @@ INSERT INTO group_func(id_group, id_functionality) VALUES (2, 1);
 
 -- Insert User
 
-INSERT INTO adm_user(id, name, birth_date, id_group) VALUES (1, 'adm', '2000-01-01', 1);
-INSERT INTO adm_user(id, name, birth_date, id_group) VALUES (2, 'opr', '2000-01-01', 2);
+INSERT INTO adm_user(id, name, birth_date, registry, id_group) VALUES (1, 'adm', '2000-01-01', 1111, 1);
+INSERT INTO adm_user(id, name, birth_date, registry, id_group) VALUES (2, 'opr', '2000-01-01', 2222, 2);
