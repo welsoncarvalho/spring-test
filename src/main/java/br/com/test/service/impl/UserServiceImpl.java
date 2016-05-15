@@ -7,6 +7,8 @@ import br.com.test.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by welson on 25/04/16.
  */
@@ -27,4 +29,7 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public List<User> list() {
+        return userRepository.findAll();
+    }
 }
