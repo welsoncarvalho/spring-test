@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
 
     private void checkUserRegistry(User user) {
 
-        Optional<User> userOptional = Optional.of(userRepository.findByRegistry(user.getRegistry()));
+        Optional<User> userOptional = Optional.ofNullable(userRepository.findByRegistry(user.getRegistry()));
         userOptional.ifPresent(u -> {
             throw new BusinessException("User " + user.getRegistry() + " already exists");
         });
