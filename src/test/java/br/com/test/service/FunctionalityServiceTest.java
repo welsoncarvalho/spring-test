@@ -37,7 +37,7 @@ public class FunctionalityServiceTest extends AbstractServiceTest {
     @Test
     public void testList() {
         List<Functionality> listFunctionality = functionalityService.list();
-        Assert.assertTrue(listFunctionality.size() > 0);
+        Assert.assertTrue(!listFunctionality.isEmpty());
     }
 
 }

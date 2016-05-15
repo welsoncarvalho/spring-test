@@ -55,7 +55,7 @@ public class UserServiceTest extends AbstractServiceTest {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             birthDate = sdf.parse(NEW_BIRTHDATE);
         } catch (ParseException e) {
-            e.printStackTrace();
+            getLogger().error(e.getMessage(), e);
         }
 
         return birthDate;

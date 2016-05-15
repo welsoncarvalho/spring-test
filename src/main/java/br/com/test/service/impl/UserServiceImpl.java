@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by welson on 25/04/16.
@@ -24,9 +25,12 @@ public class UserServiceImpl implements UserService {
     }
 
     private void checkUserRegistry(User user) {
-        if(userRepository.findByRegistry(user.getRegistry()) != null) {
-            throw new BusinessException("Already exist user registry");
-        }
+
+        Optional<User> userOptional = Optional.of(userRepository.findByRegistry(user.getRegistry()));
+        userOptional.ifPresent(u -> {
+            throw new BusinessException("User " + user.getRegistry() + " already exists");
+        });
+
     }
 
     public List<User> list() {
