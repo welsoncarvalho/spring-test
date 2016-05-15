@@ -41,7 +41,7 @@ public class GroupServiceTest extends AbstractServiceTest {
     @Test
     public void testList() {
         List<Group> groups = groupService.list();
-        Assert.assertTrue(groups.size() > 0);
+        Assert.assertTrue(!groups.isEmpty());
     }
 
     private Group buildNewGroup() {
@@ -53,7 +53,7 @@ public class GroupServiceTest extends AbstractServiceTest {
 
     private Set<Functionality> getFunctionalities() {
         List<Functionality> functionalities = functionalityService.list();
-        return new HashSet<Functionality>(functionalities);
+        return new HashSet<>(functionalities);
     }
 
 }

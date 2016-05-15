@@ -10,4 +10,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByRegistry(Long registry);
 
+    User findByNameLike(String name);
+
 }
