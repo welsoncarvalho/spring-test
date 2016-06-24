@@ -49,6 +49,7 @@ public class SpringJpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         localContainerEntityManagerFactoryBean.setDataSource(dataSource());
+        localContainerEntityManagerFactoryBean.setPersistenceUnitName("SPRING-TEST-PU");
         localContainerEntityManagerFactoryBean.setPackagesToScan("br.com.test.model");
 
         localContainerEntityManagerFactoryBean.setJpaDialect(jpaDialect());

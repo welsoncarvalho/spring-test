@@ -40,4 +40,8 @@ public class UserServiceImpl implements UserService {
     public User findByName(String name) {
         return userRepository.findByNameLike(name);
     }
+
+    public List<User> findByFilter(User filter) {
+        return userRepository.findByFilter(filter);
+    }
 }

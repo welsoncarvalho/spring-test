@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by welson on 30/04/16.
@@ -38,6 +39,17 @@ public class UserServiceTest extends AbstractServiceTest {
         userService.save(user);
 
         Assert.assertNotNull(user.getId());
+    }
+
+    @Test
+    public void testFindByFilter() {
+        User filter = new User();
+        filter.setId(1L);
+        filter.setName("ad");
+
+        List<User> users = userService.findByFilter(filter);
+
+        Assert.assertTrue(!users.isEmpty());
     }
 
     private User buildNewUser() {
