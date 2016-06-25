@@ -52,6 +52,12 @@ public class UserServiceTest extends AbstractServiceTest {
         Assert.assertTrue(!users.isEmpty());
     }
 
+    @Test
+    public void testFindByName() {
+        User user = userService.findByName("%dm%");
+        Assert.assertEquals(1, user.getId().longValue());
+    }
+
     private User buildNewUser() {
         User user = new User();
         user.setName(NEW_NAME);
