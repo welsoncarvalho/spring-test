@@ -13,19 +13,21 @@
 
   <build>
     <pluginManagement>
-      <groupId>external.atlassian.jgitflow</groupId>
-      <artifactId>jgitflow-maven-plugin</artifactId>
-      <version>1.0-m4.3</version>
-      <configuration>
-        <pushReleases>true</pushReleases>
-        <flowInitContext>
-          <masterBranchName>master</masterBranchName>
-          <developBranchName>development</developBranchName>
-          <featureBranchPrefix>feature-</featureBranchPrefix>
-          <releaseBranchPrefix>release-</releaseBranchPrefix>
-          <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
-        </flowInitContext>
-      </configuration>
+      <plugin>
+        <groupId>external.atlassian.jgitflow</groupId>
+        <artifactId>jgitflow-maven-plugin</artifactId>
+        <version>1.0-m4.3</version>
+        <configuration>
+          <pushReleases>true</pushReleases>
+          <flowInitContext>
+            <masterBranchName>master</masterBranchName>
+            <developBranchName>development</developBranchName>
+            <featureBranchPrefix>feature-</featureBranchPrefix>
+            <releaseBranchPrefix>release-</releaseBranchPrefix>
+            <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+          </flowInitContext>
+        </configuration>
+      </plugin>
     </pluginManagement>
     <plugins>
       <plugin>
