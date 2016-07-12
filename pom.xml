@@ -3,7 +3,7 @@
 
   <groupId>br.com.teste</groupId>
   <artifactId>spring-test</artifactId>
-  <version>1.0.2_RC03-SNAPSHOT</version>
+  <version>1.0.2_RC02</version>
 
   <parent>
     <groupId>com.test</groupId>
